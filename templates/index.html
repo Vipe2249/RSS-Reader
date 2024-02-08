@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+     Feeds
+{% endblock %}
+
+{% block main %}
+     <body>
+          <div id="accordion">
+               {% for entry in entries %}
+               <div class="card">
+                 <div class="card-header" id="heading{{ loop.index }}">
+                   <h5 class="card-title">
+                     <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="true" aria-controls="collapse{{ loop.index }}">
+                       {{ entry.title }}
+                     </button>
+                    </h5>
+                    <div class="row">
+                      <div class="col-5">
+                        <a href="{{ entry.link }}">Source</a>
+                      </div>
+                      <div class="col-5">
+                        {{ entry.author }}
+                      </div>
+                     </div>
+                 </div>
+
+                 <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}" data-bs-parent="#accordion">
+                    <div class="card-body">
+                      {{ entry.summary | safe }}
+                    </div>
+                  </div>
+                </div>
+                {% else %}
+                <li class="list-group-item mx-auto" name="list">You have not added any feeds yet, go to Manage Feeds to add some!</li>
+               {% endfor %}
+          </div>
+     </body>
+{% endblock %}

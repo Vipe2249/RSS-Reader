@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Manage Feeds
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col">
+            <b><h2>Add Feeds</h2></b>
+            <form action="/manage" method="post">
+                    <div class="colitems">
+                        <input autocomplete="off" id="title" name="title" placeholder="Enter Feed Name" required type="text" class="form-control mx-auto w-auto">
+                    </div>
+                    <div class="colitems">
+                        <input autocomplete="off" id="url" name="url" placeholder="Enter Feed URL" required type="text" class="form-control mx-auto w-auto">
+                    </div>
+                    <div class="colitems">
+                        <button class="btn btn-secondary" type="submit">Submit</button>
+                    </div>
+            </form>
+        </div>
+        <div class="col">
+          <b><h2>Remove Feeds</h2></b>
+          <form action="/remove" method="post">
+            <div class="colitems">
+                <input autocomplete="off" id="remove-title" name="remove-title" placeholder="Enter Feed Name" required type="text" class="form-control mx-auto w-auto">
+            </div>
+            <div class="colitems">
+                <button class="btn btn-secondary" type="submit">Submit</button>
+            </div>
+          </form>
+      </div>
+  </div>
+  <ul class="list-group">
+    <a>Current Feed List</a>
+          {% for entry in entries %}
+              <li class="list-group-item mx-auto" name="list">{{ entry.title }}</li>
+              {% else %}
+              <li class="list-group-item mx-auto" name="list">Empty</li>
+          {% endfor %}
+  </ul>
+{% endblock %}
