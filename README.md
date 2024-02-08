@@ -57,8 +57,7 @@ I've used many different feeds before, so I thought of taking a crack at making 
 # Installation
 Install [pip](https://pip.pypa.io/en/stable/installation/)
 ```
-git clone
-cd /project
+git clone https://github.com/Kagura374/RSS-Reader.git
 pip install -r requirements.txt
 flask run
 ```
