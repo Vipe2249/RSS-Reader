@@ -2,7 +2,6 @@
 
 # About
 This was developed as a final project for Harvard University's CS50x Introduction to Computer Science.<br>
-Here's a quick video demo: [click me!](https://youtu.be/PshoiHSE_Bw).<br>
 The main idea of this project came from my interest in RSS feeds. <br>
 I've used many different feeds before, so I thought of taking a crack at making one.
 
