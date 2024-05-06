@@ -14,7 +14,7 @@ I've used many different feeds before, so I thought of taking a crack at making 
 
 # Layout
 #### Main page
-* This is main page that displays all currently added RSS feed entries, it features an accodion dropdown to view the articles content. <br>
+* This is main page that displays all currently added RSS feed entries, it features an accordion dropdown to view the articles content. <br>
 ![image](https://github.com/Kagura374/RSS-Reader/assets/126167792/6800db83-f421-4b50-9d2c-334f8bed9f00)
 
 #### Manage Feeds
