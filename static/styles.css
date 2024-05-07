@@ -1,3 +1,33 @@
+@media screen and (max-width: 415px) {
+    .row {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100% !important;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 297px) {
+    .header a button {
+        height: 64px;
+    }
+}
+
+.card {
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
 .main {
     display: block;
 }
